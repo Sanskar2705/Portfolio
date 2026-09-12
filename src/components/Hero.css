@@ -1,0 +1,419 @@
+.hero-academic {
+  padding: 85px 1.5rem 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-academic__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hero-academic__header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.hero-academic__title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+}
+
+.name-bold {
+  font-weight: 700;
+}
+
+.hero-academic__affiliation {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.hero-academic__affiliation a {
+  color: var(--text-secondary);
+}
+
+.hero-academic__affiliation a:hover {
+  color: var(--accent-blue);
+}
+
+/* Body layout */
+.hero-academic__body {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+/* Profile Sidebar (Right side like Daniel Gomm) */
+.hero-academic__profile {
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.profile-img-wrap {
+  width: 175px;
+  height: 175px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  border: 3px solid var(--border-subtle);
+  box-shadow: var(--shadow-md);
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  transform: scale(1.25);
+  transform-origin: center 22%;
+}
+
+.profile-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.profile-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.profile-status-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 0.75rem 0.9rem;
+  background: var(--accent-green-subtle);
+  border: 1px solid rgba(46, 204, 113, 0.28);
+  border-radius: var(--radius-md);
+  margin-bottom: 1.15rem;
+  text-decoration: none !important;
+  transition: all var(--transition-fast);
+  box-sizing: border-box;
+}
+
+.profile-status-card:hover {
+  border-color: var(--accent-green);
+  box-shadow: 0 4px 14px rgba(46, 204, 113, 0.15);
+  transform: translateY(-1px);
+}
+
+.status-card__title-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+}
+
+.status-beacon {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.beacon-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  z-index: 2;
+}
+
+.beacon-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--accent-green);
+  opacity: 0.75;
+  animation: beacon-ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes beacon-ping {
+  75%, 100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.status-card__title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.3;
+}
+
+.status-card__sub {
+  font-size: 0.74rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+  padding-left: 15px;
+  font-family: var(--font-mono);
+}
+
+.profile-socials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0.45rem 0.5rem;
+  background: var(--bg-badge);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.social-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.social-btn--cv {
+  grid-column: span 2;
+  background: var(--accent-blue-subtle);
+  color: var(--accent-blue);
+  border-color: transparent;
+}
+
+.social-btn--cv:hover {
+  background: var(--accent-blue);
+  color: #fff;
+}
+
+/* Narrative Bio (Left side) */
+.hero-academic__content {
+  flex: 1;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.hero-academic__content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.lead-paragraph {
+  font-size: 1.12rem;
+  color: var(--text-main);
+  line-height: 1.75;
+}
+
+.academic-highlight-card {
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--accent-blue-subtle);
+  border-left: 3px solid var(--accent-blue);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--text-main);
+  font-size: 0.95rem;
+}
+
+.highlight-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+.highlight-icon {
+  flex-shrink: 0;
+}
+
+.hero-quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.btn-academic-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.5rem 1.15rem;
+  background: var(--accent-blue);
+  color: #ffffff !important;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: background var(--transition-fast);
+}
+
+.btn-academic-primary:hover {
+  background: var(--accent-blue-hover);
+  text-decoration: none;
+}
+
+.btn-academic-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.5rem 1.15rem;
+  background: var(--bg-card);
+  color: var(--text-main) !important;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.btn-academic-secondary:hover {
+  background: var(--bg-body-alt);
+  border-color: var(--border-strong);
+  text-decoration: none;
+}
+
+/* Key Conference Status Callouts in Hero */
+.hero-conference-callout {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.hero-conf-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.5rem 0.85rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 0.84rem;
+  text-decoration: none !important;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-conf-item:hover {
+  transform: translateX(4px);
+  border-color: var(--border-strong);
+}
+
+.hero-conf-item--accepted {
+  border-left: 3px solid var(--accent-green);
+}
+
+.hero-conf-item--accepted:hover {
+  box-shadow: var(--status-accepted-glow);
+  border-color: var(--status-accepted-border);
+  border-left-color: var(--accent-green);
+}
+
+.hero-conf-item--review {
+  border-left: 3px solid var(--accent-amber);
+}
+
+.hero-conf-item--review:hover {
+  box-shadow: var(--status-review-glow);
+  border-color: var(--status-review-border);
+  border-left-color: var(--accent-amber);
+}
+
+.hero-conf-item--upcoming {
+  border-left: 3px solid var(--accent-purple);
+}
+
+.hero-conf-item--upcoming:hover {
+  box-shadow: var(--status-upcoming-glow);
+  border-color: var(--status-upcoming-border);
+  border-left-color: var(--accent-purple);
+}
+
+.hero-conf-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.hero-conf-dot--green {
+  background: var(--accent-green);
+  box-shadow: 0 0 6px var(--accent-green);
+}
+
+.hero-conf-dot--amber {
+  background: var(--accent-amber);
+  box-shadow: 0 0 6px var(--accent-amber);
+}
+
+.hero-conf-dot--purple {
+  background: var(--accent-purple);
+  box-shadow: 0 0 6px var(--accent-purple);
+}
+
+.hero-conf-tag {
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+}
+
+.hero-conf-text {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 860px) {
+  .hero-academic__body {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  .hero-academic__profile {
+    flex: none;
+    width: 100%;
+  }
+  .hero-academic__title {
+    font-size: 2rem;
+  }
+}

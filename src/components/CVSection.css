@@ -1,0 +1,142 @@
+.cv-section {
+  padding: 3.5rem 1.5rem;
+  position: relative;
+  z-index: 1;
+  background: var(--bg-body-alt);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.cv__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Academic Contact Box */
+.academic-contact-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.contact-box__inner {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-info-col {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.contact-subtext {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.contact-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-link-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.contact-link-row:hover {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.contact-badge-col {
+  flex: 0 0 320px;
+}
+
+.open-positions-card {
+  background: var(--bg-body-alt);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.open-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  background: var(--accent-green-subtle);
+  color: var(--accent-green);
+  border-radius: 4px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.pulsing-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  display: inline-block;
+}
+
+.open-positions-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.35rem;
+}
+
+.open-positions-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.btn-contact-direct {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  background: var(--accent-blue);
+  color: #ffffff !important;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: background var(--transition-fast);
+  text-align: center;
+  width: 100%;
+}
+
+.btn-contact-direct:hover {
+  background: var(--accent-blue-hover);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .contact-box__inner {
+    flex-direction: column;
+  }
+
+  .contact-badge-col {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}

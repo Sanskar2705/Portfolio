@@ -1,0 +1,381 @@
+.experience-section {
+  padding: 4rem 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.experience__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.experience__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.experience__title-group {
+  flex: 1;
+  min-width: 260px;
+}
+
+.experience__title-group .academic-section-title {
+  margin-bottom: 0.35rem;
+}
+
+.experience__subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Filter Pills */
+.exp-filters {
+  display: inline-flex;
+  gap: 0.5rem;
+  padding: 4px;
+  background: var(--bg-card-alt);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+}
+
+.exp-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.exp-filter-btn:hover {
+  color: var(--text-main);
+  background: var(--bg-card-hover);
+}
+
+.exp-filter-btn.active {
+  background: var(--bg-card);
+  color: var(--text-main);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.exp-filter-count {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  opacity: 0.75;
+}
+
+/* Experience Deck Container */
+.experience-deck {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+/* Experience Modern Card */
+.exp-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Left accent bar on hover/active */
+.exp-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+}
+
+.exp-card:hover::before {
+  opacity: 1;
+}
+
+.exp-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-hover);
+}
+
+/* Color Themes */
+.exp-theme-blue::before { background: var(--accent-blue); }
+.exp-theme-teal::before { background: var(--accent-green); }
+.exp-theme-purple::before { background: var(--accent-purple); }
+.exp-theme-rose::before { background: #f43f5e; }
+.exp-theme-amber::before { background: var(--accent-amber); }
+
+/* Current Appointment Highlight */
+.exp-card--current {
+  border-color: rgba(52, 152, 219, 0.35);
+  background: linear-gradient(
+    90deg,
+    var(--accent-blue-subtle) 0%,
+    var(--bg-card) 25%
+  );
+}
+
+.exp-card--current::before {
+  opacity: 1;
+  background: var(--accent-blue);
+}
+
+/* Left Section: Icon + Role Details */
+.exp-card__main {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.exp-icon-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.exp-card:hover .exp-icon-wrap {
+  transform: scale(1.05);
+}
+
+.exp-theme-blue .exp-icon-wrap {
+  background: var(--accent-blue-subtle);
+  color: var(--accent-blue);
+}
+
+.exp-theme-teal .exp-icon-wrap {
+  background: var(--accent-green-subtle);
+  color: var(--accent-green);
+}
+
+.exp-theme-purple .exp-icon-wrap {
+  background: var(--accent-purple-subtle);
+  color: var(--accent-purple);
+}
+
+.exp-theme-rose .exp-icon-wrap {
+  background: rgba(244, 63, 94, 0.12);
+  color: #f43f5e;
+}
+
+.exp-theme-amber .exp-icon-wrap {
+  background: var(--accent-amber-subtle);
+  color: var(--accent-amber);
+}
+
+.exp-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.exp-role-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.exp-role {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.exp-status-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--accent-green-subtle);
+  color: var(--accent-green);
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  box-shadow: 0 0 8px var(--accent-green);
+  animation: live-pulse 2s infinite ease-in-out;
+}
+
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.35); }
+}
+
+.exp-org-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  flex-wrap: wrap;
+}
+
+.exp-institution {
+  font-weight: 600;
+  color: var(--text-main);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.exp-sep {
+  opacity: 0.4;
+}
+
+.exp-dept {
+  color: var(--text-muted);
+}
+
+/* Right Section: Category + Metas */
+.exp-card__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.exp-category-pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-badge);
+  color: var(--text-secondary);
+}
+
+.exp-theme-blue .exp-category-pill {
+  background: var(--accent-blue-subtle);
+  color: var(--accent-blue);
+}
+
+.exp-theme-teal .exp-category-pill {
+  background: var(--accent-green-subtle);
+  color: var(--accent-green);
+}
+
+.exp-theme-purple .exp-category-pill {
+  background: var(--accent-purple-subtle);
+  color: var(--accent-purple);
+}
+
+.exp-theme-rose .exp-category-pill {
+  background: rgba(244, 63, 94, 0.12);
+  color: #f43f5e;
+}
+
+.exp-theme-amber .exp-category-pill {
+  background: var(--accent-amber-subtle);
+  color: var(--accent-amber);
+}
+
+.exp-meta-tags {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.exp-meta-item {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.exp-meta-period {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.exp-meta-icon {
+  opacity: 0.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 860px) {
+  .exp-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .exp-card__meta {
+    align-items: flex-start;
+    width: 100%;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 0.75rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 580px) {
+  .experience-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .exp-card {
+    padding: 1rem 1.15rem;
+  }
+
+  .exp-card__meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .exp-meta-tags {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .exp-filters {
+    width: 100%;
+    overflow-x: auto;
+  }
+}

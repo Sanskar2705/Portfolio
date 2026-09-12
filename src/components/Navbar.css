@@ -1,0 +1,180 @@
+.academic-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  z-index: 900;
+  background: var(--nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  transition: all var(--transition-normal);
+}
+
+.academic-navbar--scrolled {
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+
+.navbar__brand {
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.navbar__brand:hover {
+  text-decoration: none;
+  color: var(--accent-blue);
+}
+
+.brand-bold {
+  font-weight: 700;
+}
+
+.navbar__nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  text-transform: lowercase;
+  padding: 4px 2px;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.nav-link--active {
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+.nav-link--active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-blue);
+  border-radius: 2px;
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.btn-search-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: var(--bg-badge);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-search-toggle:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-main);
+  border-color: var(--border-strong);
+}
+
+.search-kbd-hint {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: lowercase;
+}
+
+.btn-theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.btn-theme-toggle:hover {
+  background: var(--bg-badge);
+  color: var(--text-main);
+}
+
+.btn-mobile-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: var(--text-main);
+}
+
+/* Daniel Gomm Scroll Progress Bar */
+.scroll-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2.5px;
+  background: var(--accent-blue);
+  transition: width 0.05s linear;
+  z-index: 901;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 1.5rem;
+  gap: 0.75rem;
+}
+
+.mobile-link {
+  text-align: left;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.mobile-link--active {
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .navbar__nav-desktop {
+    display: none;
+  }
+  .search-kbd-hint {
+    display: none;
+  }
+  .btn-mobile-toggle {
+    display: flex;
+  }
+}

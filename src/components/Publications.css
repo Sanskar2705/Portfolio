@@ -1,0 +1,626 @@
+.publications-section {
+  padding: 3.5rem 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.publications__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.publications__header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.pub-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  font-size: 0.8rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--bg-badge);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-main);
+}
+
+.filter-btn--active {
+  background: var(--accent-blue);
+  color: #ffffff;
+  border-color: var(--accent-blue);
+}
+
+.filter-btn--active:hover {
+  background: var(--accent-blue-hover);
+  color: #ffffff;
+}
+
+.publications__subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+/* =========================================================
+   Executive Conference Radar & Status Deck
+   ========================================================= */
+.conference-spotlight-deck {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.spotlight-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.35rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  min-width: 0;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+.spotlight-card:hover {
+  transform: translateY(-3px);
+}
+
+.spotlight-card--accepted {
+  background: linear-gradient(180deg, var(--status-accepted-bg) 0%, var(--bg-card) 60%);
+  border-color: var(--status-accepted-border);
+}
+
+.spotlight-card--accepted:hover {
+  box-shadow: var(--status-accepted-glow);
+  border-color: var(--accent-green);
+}
+
+.spotlight-card--review {
+  background: linear-gradient(180deg, var(--status-review-bg) 0%, var(--bg-card) 60%);
+  border-color: var(--status-review-border);
+}
+
+.spotlight-card--review:hover {
+  box-shadow: var(--status-review-glow);
+  border-color: var(--accent-amber);
+}
+
+.spotlight-card--upcoming {
+  background: linear-gradient(180deg, var(--status-upcoming-bg) 0%, var(--bg-card) 60%);
+  border-color: var(--status-upcoming-border);
+}
+
+.spotlight-card--upcoming:hover {
+  box-shadow: var(--status-upcoming-glow);
+  border-color: var(--accent-purple);
+}
+
+.spotlight-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.65rem;
+}
+
+.spotlight-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+}
+
+.spotlight-badge--accepted {
+  background: var(--status-accepted-bg);
+  color: var(--status-accepted-text);
+  border: 1px solid var(--status-accepted-border);
+}
+
+.spotlight-badge--review {
+  background: var(--status-review-bg);
+  color: var(--status-review-text);
+  border: 1px solid var(--status-review-border);
+}
+
+.spotlight-badge--upcoming {
+  background: var(--status-upcoming-bg);
+  color: var(--status-upcoming-text);
+  border: 1px solid var(--status-upcoming-border);
+}
+
+.spotlight-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  animation: liveBeacon 2s infinite ease-in-out;
+}
+
+.spotlight-dot--green {
+  background-color: var(--accent-green);
+  box-shadow: 0 0 8px var(--accent-green);
+}
+
+.spotlight-dot--amber {
+  background-color: var(--accent-amber);
+  box-shadow: 0 0 8px var(--accent-amber);
+}
+
+.spotlight-dot--purple {
+  background-color: var(--accent-purple);
+  box-shadow: 0 0 8px var(--accent-purple);
+}
+
+@keyframes liveBeacon {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.4); opacity: 0.6; }
+}
+
+.spotlight-icon--green { color: var(--accent-green); }
+.spotlight-icon--amber { color: var(--accent-amber); }
+.spotlight-icon--purple { color: var(--accent-purple); }
+
+.spotlight-venue {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.15rem;
+}
+
+.spotlight-location {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  margin-bottom: 0.45rem;
+}
+
+.spotlight-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* =========================================================
+   Bibliography List — Animated Stack Deck
+   ========================================================= */
+.bibliography-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.pub-entry--stacked {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.35rem 1.65rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-normal), border-color var(--transition-normal);
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.pub-entry--stacked:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.pub-entry--accepted {
+  border-left: 4px solid var(--accent-green);
+}
+
+.pub-entry--accepted:hover {
+  box-shadow: var(--status-accepted-glow);
+  border-color: var(--status-accepted-border);
+  border-left-color: var(--accent-green);
+}
+
+.pub-entry--review {
+  border-left: 4px solid var(--accent-amber);
+}
+
+.pub-entry--review:hover {
+  box-shadow: var(--status-review-glow);
+  border-color: var(--status-review-border);
+  border-left-color: var(--accent-amber);
+}
+
+.pub-entry--preprint {
+  border-left: 4px solid var(--accent-purple);
+}
+
+.pub-entry--preprint:hover {
+  box-shadow: var(--status-upcoming-glow);
+  border-color: var(--status-upcoming-border);
+  border-left-color: var(--accent-purple);
+}
+
+/* Top Callout Strip inside Card */
+.pub-callout-strip {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.pub-callout-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.callout-live-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.callout-live-indicator--accepted {
+  background: var(--accent-green);
+  box-shadow: 0 0 6px var(--accent-green);
+}
+
+.callout-live-indicator--review {
+  background: var(--accent-amber);
+  box-shadow: 0 0 6px var(--accent-amber);
+}
+
+.callout-live-indicator--preprint {
+  background: var(--accent-purple);
+  box-shadow: 0 0 6px var(--accent-purple);
+}
+
+.pub-callout-venue {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+.pub-callout-status-chip {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: var(--radius-sm);
+}
+
+.pub-callout-status-chip--accepted {
+  background: var(--status-accepted-bg);
+  color: var(--status-accepted-text);
+  border: 1px solid var(--status-accepted-border);
+}
+
+.pub-callout-status-chip--review {
+  background: var(--status-review-bg);
+  color: var(--status-review-text);
+  border: 1px solid var(--status-review-border);
+}
+
+.pub-callout-status-chip--preprint {
+  background: var(--status-upcoming-bg);
+  color: var(--status-upcoming-text);
+  border: 1px solid var(--status-upcoming-border);
+}
+
+.pub-entry__row {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.pub-entry__abbr-col {
+  flex: 0 0 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+}
+
+.venue-badge {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-align: center;
+  width: 100%;
+}
+
+.status-accepted {
+  background: var(--status-accepted-bg);
+  color: var(--status-accepted-text);
+  border: 1px solid var(--status-accepted-border);
+}
+
+.status-review {
+  background: var(--status-review-bg);
+  color: var(--status-review-text);
+  border: 1px solid var(--status-review-border);
+}
+
+.status-preprint {
+  background: var(--status-upcoming-bg);
+  color: var(--status-upcoming-text);
+  border: 1px solid var(--status-upcoming-border);
+}
+
+.pub-year-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding-left: 4px;
+}
+
+.pub-entry__details {
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pub-title {
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--text-main);
+  margin-bottom: 0.4rem;
+}
+
+.pub-title a {
+  color: var(--text-main);
+}
+
+.pub-title a:hover {
+  color: var(--accent-blue);
+  text-decoration: underline;
+}
+
+.pub-authors {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.author-highlight {
+  font-weight: 700;
+  color: var(--text-main);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-blue);
+  text-underline-offset: 2px;
+}
+
+.pub-periodical {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+/* al-folio Action buttons */
+.pub-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  padding: 2px 9px;
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.btn-action:hover {
+  background: var(--bg-badge);
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
+  text-decoration: none;
+}
+
+.btn-action--active {
+  background: var(--accent-blue-subtle);
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+.btn-action--confidential {
+  color: var(--accent-amber);
+  border-color: rgba(217, 119, 6, 0.35);
+  background: var(--accent-amber-subtle);
+}
+
+.btn-action--confidential:hover {
+  background: rgba(217, 119, 6, 0.2);
+  color: var(--accent-amber);
+  border-color: var(--accent-amber);
+}
+
+.confidential-title-trigger {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-main);
+  transition: color var(--transition-fast);
+}
+
+.confidential-title-trigger:hover {
+  color: var(--accent-amber);
+}
+
+.title-lock-icon {
+  color: var(--accent-amber);
+  flex-shrink: 0;
+}
+
+.btn-action--pdf {
+  color: #dc3545;
+  border-color: rgba(220, 53, 69, 0.3);
+}
+
+.btn-action--pdf:hover {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.btn-action--code {
+  color: var(--text-main);
+}
+
+/* Collapsible Box (Abstract & BibTeX) */
+.pub-collapsible-box {
+  margin-top: 0.85rem;
+  padding: 1rem 1.25rem;
+  background: var(--bg-body-alt);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  animation: fadeInBox 0.18s ease-out;
+}
+
+@keyframes fadeInBox {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.box-header {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pub-abstract-box p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.bibtex-pre {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  background: var(--bg-code);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  white-space: pre;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.btn-copy-bibtex {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 2px 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+}
+
+.btn-copy-bibtex:hover {
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+@media (max-width: 860px) {
+  .conference-spotlight-deck {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .pub-entry__row {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .pub-entry__abbr-col {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+  }
+  .venue-badge {
+    width: auto;
+  }
+  .pub-callout-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+}
