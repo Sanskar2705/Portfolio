@@ -8,7 +8,7 @@ const navLinks = [
   { id: 'publications', label: 'publications' },
   { id: 'research', label: 'research' },
   { id: 'experience', label: 'experience' },
-  { id: 'cv', label: 'cv', isFile: true, url: '/docs/Sanskar_Singh_CV.pdf' },
+  { id: 'cv', label: 'cv', isFile: true, url: `${import.meta.env.BASE_URL}docs/Sanskar_Singh_CV.pdf` },
   { id: 'contact', label: 'contact' },
 ]
 

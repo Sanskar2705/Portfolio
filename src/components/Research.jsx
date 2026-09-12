@@ -14,7 +14,7 @@ const researchProjects = [
     badgeType: 'green',
     description: 'Examining accuracy-efficiency Pareto frontiers of competing dense retrieval architectures on large-scale multimodal corpora. We benchmark single-index, staged reranking, and late-interaction fusion paradigms, revealing optimal approximate nearest-neighbor strategies and the surprising cost dominance of reranking phases in end-to-end pipeline design.',
     tags: ['Dense Retrieval', 'Cross-Modal IR', 'O-IVFPQ', 'FAISS', 'Efficiency-Aware Retrieval'],
-    paperLink: '/docs/CIKM_full_Camera_Ready_final.pdf',
+    paperLink: `${import.meta.env.BASE_URL}docs/CIKM_full_Camera_Ready_final.pdf`,
     codeLink: 'https://github.com/data-iitd/mmir-cikm',
   },
   {
@@ -26,7 +26,7 @@ const researchProjects = [
     badgeType: 'green',
     description: 'Understanding compositional effects in dense retrieval by investigating how architectural choices create emergent interactions across stages. We expose how first-stage retriever quality gates reranking effectiveness, revealing that ensemble gains stem from query-space complementarity rather than raw-score aggregation.',
     tags: ['Multi-Stage Retrieval', 'Reciprocal Rank Fusion', 'Candidate Ranking', 'Ensemble Fusion'],
-    paperLink: '/docs/CIKM_Short_Camera_Ready_final.pdf',
+    paperLink: `${import.meta.env.BASE_URL}docs/CIKM_Short_Camera_Ready_final.pdf`,
     codeLink: 'https://github.com/data-iitd/mmir-cikm',
   },
   {

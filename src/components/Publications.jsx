@@ -27,7 +27,7 @@ const publicationsData = [
   address   = {Rome, Italy},
   doi       = {10.1145/3799682.3840752}
 }`,
-    pdf: '/docs/CIKM_full_Camera_Ready_final.pdf',
+    pdf: `${import.meta.env.BASE_URL}docs/CIKM_full_Camera_Ready_final.pdf`,
     code: 'https://github.com/data-iitd/mmir-cikm',
     doi: 'https://doi.org/10.1145/3799682.3840752',
     isConfidential: false,
@@ -54,7 +54,7 @@ const publicationsData = [
   address   = {Rome, Italy},
   doi       = {10.1145/3799682.3840060}
 }`,
-    pdf: '/docs/CIKM_Short_Camera_Ready_final.pdf',
+    pdf: `${import.meta.env.BASE_URL}docs/CIKM_Short_Camera_Ready_final.pdf`,
     code: 'https://github.com/data-iitd/mmir-cikm',
     doi: 'https://doi.org/10.1145/3799682.3840060',
     isConfidential: false,
@@ -126,7 +126,7 @@ const publicationsData = [
   year      = {2025},
   address   = {Seoul, South Korea}
 }`,
-    pdf: '/docs/sarch.pdf',
+    pdf: `${import.meta.env.BASE_URL}docs/sarch.pdf`,
     isConfidential: false,
   },
 ]

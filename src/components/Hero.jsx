@@ -29,7 +29,7 @@ export default function Hero() {
           <aside className="hero-academic__profile">
             <div className="profile-img-wrap">
               <img
-                src="/portrait.jpg"
+                src={`${import.meta.env.BASE_URL}portrait.jpg`}
                 alt="Sanskar Singh"
                 className="profile-img"
               />
@@ -101,7 +101,7 @@ export default function Hero() {
                 <span>LinkedIn</span>
               </a>
               <a
-                href="/docs/CV_Sanskar_IR_CoreAI_LaTeX__2_ (1).pdf"
+                href={`${import.meta.env.BASE_URL}docs/Sanskar_Singh_CV.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-btn social-btn--cv"
@@ -150,7 +150,7 @@ export default function Hero() {
               <a href="#research" className="btn-academic-secondary">
                 Research Focus
               </a>
-              <a href="/docs/Sanskar_Singh_CV.pdf" target="_blank" rel="noopener noreferrer" className="btn-academic-secondary">
+              <a href={`${import.meta.env.BASE_URL}docs/Sanskar_Singh_CV.pdf`} target="_blank" rel="noopener noreferrer" className="btn-academic-secondary">
                 Curriculum Vitae ↗
               </a>
             </div>

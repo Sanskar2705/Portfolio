@@ -8,15 +8,15 @@ const searchItems = [
   { type: 'Section', title: 'Selected Publications', subtitle: 'Accepted papers at CIKM 2026, SIGIR-AP, and workshops', target: 'publications' },
   { type: 'Section', title: 'Research Focus & Projects', subtitle: 'Cross-modal retrieval, ANN indexing, vector search', target: 'research' },
   { type: 'Section', title: 'Experience', subtitle: 'IIT Delhi, Eternal Robotics, Unizoy, IIT Kharagpur', target: 'experience' },
-  { type: 'CV', title: 'Curriculum Vitae', subtitle: 'Open latest academic CV (PDF) in new tab', link: '/docs/Sanskar_Singh_CV.pdf' },
+  { type: 'CV', title: 'Curriculum Vitae', subtitle: 'Open latest academic CV (PDF) in new tab', link: `${import.meta.env.BASE_URL}docs/Sanskar_Singh_CV.pdf` },
   { type: 'Section', title: 'Contact', subtitle: 'Get in touch, email addresses, and lab location', target: 'contact' },
   
   // Publications
-  { type: 'Publication', title: 'Scalability Analysis of Cross-Modal Text-to-Image Pipelines', subtitle: 'CIKM 2026 Full Research Paper · Accepted', target: 'publications', link: '/docs/CIKM_full_Camera_Ready_final.pdf' },
-  { type: 'Publication', title: 'Retrieval-Stage Interactions in Cross-Modal Text-to-Image Retrieval Pipelines', subtitle: 'CIKM 2026 Short Paper · Accepted', target: 'publications', link: '/docs/CIKM_Short_Camera_Ready_final.pdf' },
+  { type: 'Publication', title: 'Scalability Analysis of Cross-Modal Text-to-Image Pipelines', subtitle: 'CIKM 2026 Full Research Paper · Accepted', target: 'publications', link: `${import.meta.env.BASE_URL}docs/CIKM_full_Camera_Ready_final.pdf` },
+  { type: 'Publication', title: 'Retrieval-Stage Interactions in Cross-Modal Text-to-Image Retrieval Pipelines', subtitle: 'CIKM 2026 Short Paper · Accepted', target: 'publications', link: `${import.meta.env.BASE_URL}docs/CIKM_Short_Camera_Ready_final.pdf` },
   { type: 'Publication', title: 'EduExplain: Benchmark for Multimodal Explanation Set Retrieval', subtitle: 'SIGIR-AP 2026 (Submitted July 2026) · Double-blind review', target: 'publications', isConfidential: true },
   { type: 'Publication', title: 'Spatial Fidelity Maps: A Query-Time, Ground-Truth-Free Signal for Approximate Nearest-Neighbor Retrieval', subtitle: 'Preparing for VLDB (October 2026) · Working draft', target: 'publications', isConfidential: true },
-  { type: 'Publication', title: 'SARCH: Multimodal Search for Archaeological Archives', subtitle: 'CIKM 2025 MMGenSR Workshop (Seoul) · Published', target: 'publications', link: '/docs/sarch.pdf' },
+  { type: 'Publication', title: 'SARCH: Multimodal Search for Archaeological Archives', subtitle: 'CIKM 2025 MMGenSR Workshop (Seoul) · Published', target: 'publications', link: `${import.meta.env.BASE_URL}docs/sarch.pdf` },
   
   // Mentors & Links
   { type: 'Mentor', title: 'Prof. Maya Ramanath', subtitle: 'Advisor at IIT Delhi (DSIRe Lab)', external: 'https://mayaramanath.wixsite.com/maya-1' },
