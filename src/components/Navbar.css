@@ -168,13 +168,32 @@
 }
 
 @media (max-width: 768px) {
+  .navbar__container {
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  .navbar__brand {
+    flex-shrink: 0;
+    font-size: 1rem;
+  }
   .navbar__nav-desktop {
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 1rem;
+    flex: 1;
+  }
+  .navbar__nav-desktop::-webkit-scrollbar {
     display: none;
+  }
+  .nav-link {
+    white-space: nowrap;
   }
   .search-kbd-hint {
     display: none;
   }
   .btn-mobile-toggle {
-    display: flex;
+    display: none;
   }
 }
