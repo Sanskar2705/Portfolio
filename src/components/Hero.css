@@ -64,8 +64,8 @@
 }
 
 .profile-img-wrap {
-  width: 175px;
-  height: 175px;
+  width: 210px;
+  height: 210px;
   border-radius: var(--radius-full);
   overflow: hidden;
   margin-bottom: 1.25rem;
