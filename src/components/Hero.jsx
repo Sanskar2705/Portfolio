@@ -12,7 +12,7 @@ export default function Hero() {
           </h1>
           <p className="hero-academic__affiliation">
             <a href="https://home.iitd.ac.in" target="_blank" rel="noopener noreferrer">
-              Indian Institute of Technology Delhi
+              IIT Delhi
             </a>
             {' · '}
             <a href="https://www.iitkgp.ac.in" target="_blank" rel="noopener noreferrer">
