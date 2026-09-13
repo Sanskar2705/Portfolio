@@ -46,7 +46,7 @@ export default function CVSection() {
                 </div>
                 <h4>PhD & Research Inquiries</h4>
                 <p>
-                  Interested in PhD programs, research scientist positions, and industrial AI research labs in Representation Learning and Multimodal Information Retrieval.
+                  Interested in PhD programs, research positions, and industrial AI research labs in Representation Learning and Multimodal Information Retrieval.
                 </p>
                 <a href="mailto:sanskar.cstaff@iitd.ac.in" className="btn-contact-direct">
                   Send an Email
