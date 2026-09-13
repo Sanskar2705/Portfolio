@@ -11,14 +11,6 @@ export default function Hero() {
             <span className="name-bold">Sanskar</span> Singh
           </h1>
           <p className="hero-academic__affiliation">
-            <a href="https://home.iitd.ac.in" target="_blank" rel="noopener noreferrer">
-              IIT Delhi
-            </a>
-            {' · '}
-            <a href="https://www.iitkgp.ac.in" target="_blank" rel="noopener noreferrer">
-              IIT Kharagpur
-            </a>
-            {' · '}
             <span>Representation Learning and Multimodal Information Retrieval</span>
           </p>
         </header>

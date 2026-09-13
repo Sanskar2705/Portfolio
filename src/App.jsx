@@ -14,7 +14,7 @@ function App() {
   const [activeSection, setActiveSection] = useState('about')
   const [theme, setTheme] = useState(() => {
     const saved = localStorage.getItem('academic-theme')
-    return saved || 'light'
+    return saved || 'dark'
   })
   const [searchOpen, setSearchOpen] = useState(false)
 
