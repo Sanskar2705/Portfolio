@@ -11,7 +11,7 @@ export default function Hero({ setActiveSection }) {
             <span className="name-bold">Sanskar</span> Singh
           </h1>
           <p className="hero-academic__affiliation">
-            <span>Representation Learning and Multimodal Information Retrieval and Core AI</span>
+            <span>Representation Learning, Multimodal Information Retrieval and Core AI</span>
           </p>
         </header>
 
