@@ -13,7 +13,7 @@ import './App.css'
 function App() {
   const [activeSection, setActiveSection] = useState('about')
   const [theme, setTheme] = useState(() => {
-    const saved = localStorage.getItem('academic-theme')
+    const saved = localStorage.getItem('academic-theme-v2')
     return saved || 'dark'
   })
   const [searchOpen, setSearchOpen] = useState(false)
@@ -21,7 +21,7 @@ function App() {
   // Sync theme with HTML root
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('academic-theme', theme)
+    localStorage.setItem('academic-theme-v2', theme)
   }, [theme])
 
   const toggleTheme = () => {
