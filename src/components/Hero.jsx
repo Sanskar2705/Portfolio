@@ -11,7 +11,7 @@ export default function Hero({ setActiveSection }) {
             <span className="name-bold">Sanskar</span> Singh
           </h1>
           <p className="hero-academic__affiliation">
-            <span>Representation Learning and Multimodal Information Retrieval</span>
+            <span>Representation Learning and Multimodal Information Retrieval and Core AI</span>
           </p>
         </header>
 
@@ -133,6 +133,10 @@ export default function Hero({ setActiveSection }) {
               <a href="https://www.iitkgp.ac.in/department/GS/faculty/gs-suvra" target="_blank" rel="noopener noreferrer">
                 Prof. Suvra Sekhar Das
               </a>. My Master's thesis was in the <strong>computer vision</strong> domain, focusing on <em>Facial Recognition and Verification using a Vision-Transformer Siamese Network</em>.
+            </p>
+
+            <p>
+              Interested in PhD programs, research positions, and industrial AI research labs in <strong>Representation Learning and Multimodal Information Retrieval</strong> or <strong>Core AI</strong>.
             </p>
 
             <div className="hero-quick-actions">
