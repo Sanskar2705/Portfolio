@@ -122,8 +122,21 @@ export default function SearchModal({ isOpen, onClose }) {
         </div>
 
         <div className="search-footer">
-          <span>Navigate with click or Enter</span>
-          <span>Press <kbd>Esc</kbd> to exit</span>
+          <div className="search-footer-left">
+            <a href="https://info.flagcounter.com/88" target="_blank" rel="noopener noreferrer" title="View detailed visitor stats (Demo Code)">
+              <img 
+                src="https://s11.flagcounter.com/count2/88/bg_08090d/txt_f8fafc/border_1e2230/columns_2/maxflags_6/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" 
+                alt="Visitor Stats" 
+                style={{ height: '36px', borderRadius: '4px', opacity: 0.9, transition: 'opacity 0.2s' }} 
+                onMouseOver={e => e.currentTarget.style.opacity = 1}
+                onMouseOut={e => e.currentTarget.style.opacity = 0.9}
+              />
+            </a>
+          </div>
+          <div className="search-footer-right" style={{ display: 'flex', gap: '12px' }}>
+            <span>Navigate with click or Enter</span>
+            <span>Press <kbd>Esc</kbd> to exit</span>
+          </div>
         </div>
       </div>
     </div>
