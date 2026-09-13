@@ -40,31 +40,13 @@ function App() {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [])
 
-  // Active section scroll spy
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['about', 'news', 'publications', 'research', 'experience', 'contact']
-      const scrollPos = window.scrollY + 140
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const el = document.getElementById(sections[i])
-        if (el && el.offsetTop <= scrollPos) {
-          setActiveSection(sections[i])
-          break
-        }
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
   return (
     <div className="academic-app">
       <AmbientCanvas />
       
       <Navbar
         activeSection={activeSection}
+        setActiveSection={setActiveSection}
         theme={theme}
         toggleTheme={toggleTheme}
         openSearch={() => setSearchOpen(true)}
@@ -76,12 +58,12 @@ function App() {
       />
 
       <main className="academic-main">
-        <Hero />
-        <News />
-        <Publications />
-        <Research />
-        <Experience />
-        <CVSection />
+        {activeSection === 'about' && <Hero setActiveSection={setActiveSection} />}
+        {activeSection === 'news' && <News />}
+        {activeSection === 'publications' && <Publications />}
+        {activeSection === 'research' && <Research />}
+        {activeSection === 'experience' && <Experience />}
+        {activeSection === 'contact' && <CVSection />}
       </main>
 
       <footer className="academic-footer">

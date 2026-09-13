@@ -12,20 +12,14 @@ const navLinks = [
   { id: 'contact', label: 'contact' },
 ]
 
-export default function Navbar({ activeSection, theme, toggleTheme, openSearch }) {
+export default function Navbar({ activeSection, setActiveSection, theme, toggleTheme, openSearch }) {
   const [scrolled, setScrolled] = useState(false)
-  const [scrollProgress, setScrollProgress] = useState(0)
   const [mobileOpen, setMobileOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY
       setScrolled(scrollY > 20)
-
-      const winHeight = document.documentElement.scrollHeight - window.innerHeight
-      if (winHeight > 0) {
-        setScrollProgress((scrollY / winHeight) * 100)
-      }
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
@@ -34,10 +28,8 @@ export default function Navbar({ activeSection, theme, toggleTheme, openSearch }
 
   const handleNavClick = (id) => {
     setMobileOpen(false)
-    const el = document.getElementById(id)
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' })
-    }
+    setActiveSection(id)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
@@ -107,9 +99,6 @@ export default function Navbar({ activeSection, theme, toggleTheme, openSearch }
           </button>
         </div>
       </div>
-
-      {/* Daniel Gomm style scroll progress bar directly under navbar */}
-      <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }} />
 
       {/* Mobile Drawer */}
       {mobileOpen && (

@@ -1,7 +1,7 @@
 import { Building2, MapPin, Mail, Phone, FileText, ExternalLink } from 'lucide-react'
 import './Hero.css'
 
-export default function Hero() {
+export default function Hero({ setActiveSection }) {
   return (
     <section id="about" className="hero-academic">
       <div className="hero-academic__container">
@@ -60,7 +60,7 @@ export default function Hero() {
               </div>
             </div>
 
-            <a href="#contact" className="profile-status-card" title="Click to get in touch regarding opportunities">
+            <a href="#contact" onClick={(e) => { e.preventDefault(); setActiveSection('contact') }} className="profile-status-card" title="Click to get in touch regarding opportunities">
               <div className="status-card__title-row">
                 <span className="status-beacon">
                   <span className="beacon-dot"></span>
@@ -136,10 +136,10 @@ export default function Hero() {
             </p>
 
             <div className="hero-quick-actions">
-              <a href="#publications" className="btn-academic-primary">
+              <a href="#publications" onClick={(e) => { e.preventDefault(); setActiveSection('publications') }} className="btn-academic-primary">
                 View Publications ↓
               </a>
-              <a href="#research" className="btn-academic-secondary">
+              <a href="#research" onClick={(e) => { e.preventDefault(); setActiveSection('research') }} className="btn-academic-secondary">
                 Research Focus
               </a>
               <a href={`${import.meta.env.BASE_URL}docs/Sanskar_Singh_CV.pdf`} target="_blank" rel="noopener noreferrer" className="btn-academic-secondary">
@@ -149,17 +149,17 @@ export default function Hero() {
 
             {/* Key Status Indicators — Immediate Noticeability */}
             <div className="hero-conference-callout">
-              <a href="#publications" className="hero-conf-item hero-conf-item--accepted">
+              <a href="#publications" onClick={(e) => { e.preventDefault(); setActiveSection('publications') }} className="hero-conf-item hero-conf-item--accepted">
                 <span className="hero-conf-dot hero-conf-dot--green"></span>
                 <strong className="hero-conf-tag">ACM CIKM '26 (Rome):</strong>
                 <span className="hero-conf-text">2 Accepted Papers (Full & Short)</span>
               </a>
-              <a href="#publications" className="hero-conf-item hero-conf-item--review">
+              <a href="#publications" onClick={(e) => { e.preventDefault(); setActiveSection('publications') }} className="hero-conf-item hero-conf-item--review">
                 <span className="hero-conf-dot hero-conf-dot--amber"></span>
                 <strong className="hero-conf-tag">ACM SIGIR-AP '26:</strong>
                 <span className="hero-conf-text">Under Peer Review (EduExplain)</span>
               </a>
-              <a href="#publications" className="hero-conf-item hero-conf-item--upcoming">
+              <a href="#publications" onClick={(e) => { e.preventDefault(); setActiveSection('publications') }} className="hero-conf-item hero-conf-item--upcoming">
                 <span className="hero-conf-dot hero-conf-dot--purple"></span>
                 <strong className="hero-conf-tag">VLDB 2027:</strong>
                 <span className="hero-conf-text">Target Oct 2026 Submission Prep</span>
