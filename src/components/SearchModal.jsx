@@ -123,9 +123,9 @@ export default function SearchModal({ isOpen, onClose }) {
 
         <div className="search-footer">
           <div className="search-footer-left">
-            <a href="https://info.flagcounter.com/88" target="_blank" rel="noopener noreferrer" title="View detailed visitor stats (Demo Code)">
+            <a href="https://info.flagcounter.com/3KjK" target="_blank" rel="noopener noreferrer" title="View detailed visitor stats">
               <img 
-                src="https://s11.flagcounter.com/count2/88/bg_08090d/txt_f8fafc/border_1e2230/columns_2/maxflags_6/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" 
+                src="https://s01.flagcounter.com/count2/3KjK/bg_08090d/txt_f8fafc/border_1e2230/columns_2/maxflags_6/viewers_0/labels_1/pageviews_1/flags_0/percent_0/" 
                 alt="Visitor Stats" 
                 style={{ height: '36px', borderRadius: '4px', opacity: 0.9, transition: 'opacity 0.2s' }} 
                 onMouseOver={e => e.currentTarget.style.opacity = 1}
