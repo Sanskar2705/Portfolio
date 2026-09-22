@@ -20,11 +20,11 @@ const newsData = [
     link: '#publications',
   },
   {
-    date: 'Jul 2026',
+    date: 'Sep 2026',
     badge: 'Submission',
     badgeType: 'amber',
-    title: 'Submitted "EduExplain: A Benchmark for Multimodal Explanation Set Retrieval from Educational Resources" to SIGIR-AP 2026',
-    description: 'First dedicated benchmark for multimodal explanation-set retrieval from educational resources ("EduExplain: A Benchmark for Multimodal Explanation Set Retrieval from Educational Resources"), pairing 321 learner queries with human-validated gold sets across 16 science textbooks.',
+    title: 'Submitted "SetCoRe" & "Set2Story" to ECIR 2027',
+    description: 'Submitted two co-authored research papers—"SetCoRe: Set Composition for Retrieval of Educational Explanations" (with Riti Verma) and "Set2Story: Retrieval-Grounded Storyboard Construction for Educational Explanation" (with Aryan Ahmed)—under peer review at ECIR 2027.',
     link: '#publications',
   },
   {

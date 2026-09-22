@@ -160,8 +160,8 @@ export default function Hero({ setActiveSection }) {
               </a>
               <a href="#publications" onClick={(e) => { e.preventDefault(); setActiveSection('publications') }} className="hero-conf-item hero-conf-item--review">
                 <span className="hero-conf-dot hero-conf-dot--amber"></span>
-                <strong className="hero-conf-tag">ACM SIGIR-AP '26:</strong>
-                <span className="hero-conf-text">Under Peer Review (EduExplain)</span>
+                <strong className="hero-conf-tag">ECIR '27:</strong>
+                <span className="hero-conf-text">2 Papers Under Peer Review (SetCoRe & Set2Story)</span>
               </a>
               <a href="#publications" onClick={(e) => { e.preventDefault(); setActiveSection('publications') }} className="hero-conf-item hero-conf-item--upcoming">
                 <span className="hero-conf-dot hero-conf-dot--purple"></span>

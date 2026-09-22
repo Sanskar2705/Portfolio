@@ -105,7 +105,7 @@ export default function ConfidentialModal({ isOpen, onClose, paperTitle, statusT
           ) : (
             <>
               <p className="confidential-text">
-                <strong>Hold tight! 🔒📄</strong> This manuscript was submitted to SIGIR-AP 2026 and is currently undergoing double-blind peer review. To preserve reviewer anonymity and respect conference embargo policies, the public PDF is locked down in the vault for now.
+                <strong>Hold tight! 🔒📄</strong> This manuscript is currently undergoing double-blind peer review for ECIR 2027. To preserve reviewer anonymity and respect conference embargo policies, the public PDF is locked down in the vault for now.
               </p>
               <p className="confidential-subtext">
                 The camera-ready version or public preprint will be released right after notification! If you are a reviewer or researcher who would like to discuss the core ideas or early results, feel free to drop me an email.

@@ -60,27 +60,50 @@ const publicationsData = [
     isConfidential: false,
   },
   {
-    id: 'tiwari2026eduexplain',
-    year: '2026',
+    id: 'verma2027setcore',
+    year: '2027',
     category: 'review',
-    venueAbbr: 'SIGIR-AP \'26',
-    conferenceHighlight: 'ACM SIGIR-AP 2026',
-    conferenceType: 'Under Review · Submitted July 2026',
-    statusBadge: 'Under Review (Submitted July 2026)',
+    venueAbbr: 'ECIR \'27',
+    conferenceHighlight: 'ECIR 2027',
+    conferenceType: 'Under Review · ECIR 2027',
+    statusBadge: 'Under Review (ECIR 2027)',
     statusClass: 'status-review',
-    title: 'EduExplain: A Benchmark for Multimodal Explanation Set Retrieval from Educational Resources',
-    authors: ['Dhruv Tiwari', 'Sanskar S. Singh', 'Ritika Jain', 'Shambhavi Bisht', 'Maya Ramanath'],
+    title: 'SetCoRe: Set Composition for Retrieval of Educational Explanations',
+    authors: ['Riti Verma', 'Sanskar S. Singh', 'Maya Ramanath'],
     me: 'Sanskar S. Singh',
-    periodical: 'Submitted July 2026 to ACM SIGIR-AP 2026',
-    abstract: 'Addressing the gap between document-level and explanation-level relevance assessment by introducing the first curated benchmark for retrieving grounded explanatory content from educational corpora. We pair learner-generated natural language queries with human-validated explanation sets spanning 16 STEM textbooks, capturing domain-specific grounding and pedagogical utility—revealing that diversity-weighted set selection underperforms simple rank-based approaches in knowledge domains where precision and topical coherence dominate.',
-    bibtex: `@article{tiwari2026eduexplain,
-  title   = {EduExplain: A Benchmark for Multimodal Explanation Set Retrieval from Educational Resources},
-  author  = {Tiwari, Dhruv and Singh, Sanskar S. and Jain, Ritika and Bisht, Shambhavi and Ramanath, Maya},
-  journal = {Submitted July 2026 to ACM SIGIR-AP},
-  year    = {2026}
+    periodical: 'Under review at ECIR 2027',
+    abstract: 'Investigating set composition strategies for retrieving effective educational explanation sets from learning resources. We pair learner queries with human-validated explanation sets, capturing domain-specific grounding and pedagogical utility in retrieval systems.',
+    bibtex: `@article{verma2027setcore,
+  title   = {SetCoRe: Set Composition for Retrieval of Educational Explanations},
+  author  = {Verma, Riti and Singh, Sanskar S. and Ramanath, Maya},
+  journal = {Under review at ECIR 2027},
+  year    = {2027}
 }`,
     isConfidential: true,
-    confidentialNotice: 'Submitted July 2026 to SIGIR-AP · Under Double-Blind Peer Review',
+    confidentialNotice: 'Under review at ECIR 2027 · Double-Blind Peer Review',
+  },
+  {
+    id: 'ahmed2027set2story',
+    year: '2027',
+    category: 'review',
+    venueAbbr: 'ECIR \'27',
+    conferenceHighlight: 'ECIR 2027',
+    conferenceType: 'Under Review · ECIR 2027',
+    statusBadge: 'Under Review (ECIR 2027)',
+    statusClass: 'status-review',
+    title: 'Set2Story: Retrieval-Grounded Storyboard Construction for Educational Explanation',
+    authors: ['Aryan Ahmed', 'Sanskar S. Singh', 'Maya Ramanath'],
+    me: 'Sanskar S. Singh',
+    periodical: 'Under review at ECIR 2027',
+    abstract: 'Formalizing storyboard planning as the missing step between explanation-set retrieval and educational content generation, with grounded resource selection, pedagogical ordering, role assignment, and time budgeting. Developed a benchmark, intrinsic evaluation metrics, and a lightweight grounded planning method.',
+    bibtex: `@article{ahmed2027set2story,
+  title   = {Set2Story: Retrieval-Grounded Storyboard Construction for Educational Explanation},
+  author  = {Ahmed, Aryan and Singh, Sanskar S. and Ramanath, Maya},
+  journal = {Under review at ECIR 2027},
+  year    = {2027}
+}`,
+    isConfidential: true,
+    confidentialNotice: 'Under review at ECIR 2027 · Double-Blind Peer Review',
   },
   {
     id: 'singh2026spatial',
@@ -198,7 +221,7 @@ export default function Publications() {
               className={`filter-btn ${activeTab === 'review' ? 'filter-btn--active' : ''}`}
               onClick={() => setActiveTab('review')}
             >
-              Under Review (1)
+              Under Review ({publicationsData.filter(p => p.category === 'review').length})
             </button>
             <button
               className={`filter-btn ${activeTab === 'preprint' ? 'filter-btn--active' : ''}`}
@@ -230,14 +253,14 @@ export default function Publications() {
             <div className="spotlight-card__header">
               <span className="spotlight-badge spotlight-badge--review">
                 <span className="spotlight-dot spotlight-dot--amber"></span>
-                UNDER DOUBLE-BLIND PEER REVIEW
+                UNDER DOUBLE-BLIND PEER REVIEW · 2 PAPERS
               </span>
               <Clock size={16} className="spotlight-icon spotlight-icon--amber" />
             </div>
-            <h4 className="spotlight-venue">ACM SIGIR-AP 2026</h4>
-            <div className="spotlight-location">Submitted July 2026</div>
+            <h4 className="spotlight-venue">ECIR 2027</h4>
+            <div className="spotlight-location">Under Peer Review</div>
             <p className="spotlight-desc">
-              EduExplain: First dedicated benchmark for multimodal explanation set retrieval from textbooks.
+              SetCoRe (Explanation Set Retrieval) & Set2Story (Retrieval-Grounded Storyboard Construction).
             </p>
           </div>
 
