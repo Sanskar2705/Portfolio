@@ -166,7 +166,7 @@ export default function Hero({ setActiveSection }) {
               <a href="#publications" onClick={(e) => { e.preventDefault(); setActiveSection('publications') }} className="hero-conf-item hero-conf-item--upcoming">
                 <span className="hero-conf-dot hero-conf-dot--purple"></span>
                 <strong className="hero-conf-tag">VLDB 2027:</strong>
-                <span className="hero-conf-text">Target Oct 2026 Submission Prep</span>
+                <span className="hero-conf-text">1 Paper Submitted</span>
               </a>
             </div>
           </article>

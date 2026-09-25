@@ -12,9 +12,9 @@ export default function ConfidentialModal({ isOpen, onClose, paperTitle, statusT
   }, [isOpen, onClose])
 
   const isVLDB = Boolean(
-    paperTitle?.toLowerCase().includes('spatial fidelity') ||
+    paperTitle?.toLowerCase().includes('fidelity synopses') ||
     statusType?.toLowerCase().includes('vldb') ||
-    statusType?.toLowerCase().includes('progress')
+    statusType?.toLowerCase().includes('submitted to vldb')
   )
 
   if (!isOpen) return null
@@ -30,7 +30,7 @@ export default function ConfidentialModal({ isOpen, onClose, paperTitle, statusT
         <div className="cartoon-header">
           <div className="cartoon-bubble">
             <span className="bubble-text">
-              {isVLDB ? 'Work in Progress! 🔬✍️' : 'Shhh! Top Secret! 🤫'}
+              {isVLDB ? 'Under Review! 🔬📄' : 'Shhh! Top Secret! 🤫'}
             </span>
           </div>
           
@@ -88,7 +88,7 @@ export default function ConfidentialModal({ isOpen, onClose, paperTitle, statusT
         <div className="confidential-body">
           <div className="confidential-badge">
             <Lock size={13} />
-            <span>{statusType || (isVLDB ? 'Preparing for VLDB (Oct 2026) · Manuscript in Preparation' : 'Confidential & Under Review')}</span>
+            <span>{statusType || (isVLDB ? 'Submitted to VLDB 2027 · Under Review' : 'Confidential & Under Review')}</span>
           </div>
 
           <h3 className="confidential-paper-title">{paperTitle}</h3>
@@ -96,10 +96,10 @@ export default function ConfidentialModal({ isOpen, onClose, paperTitle, statusT
           {isVLDB ? (
             <>
               <p className="confidential-text">
-                <strong>Manuscript currently in the works! ✍️🔬</strong> We are actively writing this manuscript and conducting final experimental benchmarking for our upcoming VLDB submission. Because the work is actively under process, we can't publicly showcase the full draft just yet!
+                <strong>Submitted & under review! 📄🔬</strong> This manuscript has been submitted to VLDB 2027 and is currently under review. To respect the review process and conference policies, the public PDF is not yet available.
               </p>
               <p className="confidential-subtext">
-                To protect unpublished findings and adhere to conference submission guidelines, the paper is staying cozy in the vault for a little while. The full preprint and benchmark codebase will be released right after submission! If you're a fellow researcher or collaborator eager to discuss the ideas early, Sanskar is happy to connect over email.
+                The full preprint and benchmark codebase will be released after the review process concludes! If you're a fellow researcher or collaborator eager to discuss the ideas, Sanskar is happy to connect over email.
               </p>
             </>
           ) : (
@@ -119,7 +119,7 @@ export default function ConfidentialModal({ isOpen, onClose, paperTitle, statusT
               className="btn-confidential-email"
             >
               <Mail size={15} />
-              <span>{isVLDB ? 'Email Sanskar for an Early Discussion' : 'Email Sanskar for a Private Draft'}</span>
+              <span>{isVLDB ? 'Email Sanskar to Discuss' : 'Email Sanskar for a Private Draft'}</span>
             </a>
             <button className="btn-confidential-dismiss" onClick={onClose}>
               Got it, I'll check back! 👍

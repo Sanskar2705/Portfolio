@@ -16,7 +16,7 @@ const searchItems = [
   { type: 'Publication', title: 'Retrieval-Stage Interactions in Cross-Modal Text-to-Image Retrieval Pipelines', subtitle: 'CIKM 2026 Short Paper · Accepted', target: 'publications', link: `${import.meta.env.BASE_URL}docs/CIKM_Short_Camera_Ready_final.pdf` },
   { type: 'Publication', title: 'SetCoRe: Set Composition for Retrieval of Educational Explanations', subtitle: 'ECIR 2027 (Under Review) · Double-blind review', target: 'publications', isConfidential: true },
   { type: 'Publication', title: 'Set2Story: Retrieval-Grounded Storyboard Construction for Educational Explanation', subtitle: 'ECIR 2027 (Under Review) · Double-blind review', target: 'publications', isConfidential: true },
-  { type: 'Publication', title: 'Spatial Fidelity Maps: A Query-Time, Ground-Truth-Free Signal for Approximate Nearest-Neighbor Retrieval', subtitle: 'Preparing for VLDB (October 2026) · Working draft', target: 'publications', isConfidential: true },
+  { type: 'Publication', title: 'Fidelity Synopses: Pre-Execution Plan Selection for Approximate Vector Search', subtitle: 'VLDB 2027 (Submitted) · Under Review', target: 'publications', isConfidential: true },
   { type: 'Publication', title: 'SARCH: Multimodal Search for Archaeological Archives', subtitle: 'CIKM 2025 MMGenSR Workshop (Seoul) · Published', target: 'publications', link: `${import.meta.env.BASE_URL}docs/sarch.pdf` },
   
   // Mentors & Links

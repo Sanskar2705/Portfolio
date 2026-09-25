@@ -106,27 +106,27 @@ const publicationsData = [
     confidentialNotice: 'Under review at ECIR 2027 · Double-Blind Peer Review',
   },
   {
-    id: 'singh2026spatial',
-    year: '2026',
+    id: 'r2027fidelity',
+    year: '2027',
     category: 'preprint',
-    venueAbbr: 'VLDB \'27 Prep',
-    conferenceHighlight: 'Target: VLDB 2027 (October 2026 Submission)',
-    conferenceType: 'In Preparation',
-    statusBadge: 'Target: VLDB (Oct 2026)',
+    venueAbbr: 'VLDB \'27',
+    conferenceHighlight: 'VLDB 2027 (Submitted)',
+    conferenceType: 'Submitted',
+    statusBadge: 'VLDB 2027 · Submitted',
     statusClass: 'status-preprint',
-    title: 'Spatial Fidelity Maps: A Query-Time, Ground-Truth-Free Signal for Approximate Nearest-Neighbor Retrieval',
-    authors: ['Sanskar S. Singh', 'Maya Ramanath'],
+    title: 'Fidelity Synopses: Pre-Execution Plan Selection for Approximate Vector Search',
+    authors: ['Adithya R', 'Sanskar S. Singh', 'Maya Ramanath'],
     me: 'Sanskar S. Singh',
-    periodical: 'Preparing for VLDB Submission (October 2026)',
-    abstract: 'Predicting approximate retrieval quality without ground-truth queries through landmark-based surrogate modeling. We propose offline-constructed landmark spaces as surrogate rankers, enabling zero-cost-at-query-time fidelity prediction viable across model architectures and modality directions—demonstrating consistent calibration and ranking-quality correlation, with applicability to dynamic index selection and cost-aware retrieval planning without recomputation.',
-    bibtex: `@article{singh2026spatial,
-  title   = {Spatial Fidelity Maps: A Query-Time, Ground-Truth-Free Signal for Approximate Nearest-Neighbor Retrieval},
-  author  = {Singh, Sanskar S. and Ramanath, Maya},
-  note    = {Preparing for VLDB October 2026 Submission},
-  year    = {2026}
+    periodical: 'Submitted to VLDB 2027',
+    abstract: 'Predicting approximate retrieval quality without ground-truth queries through an offline landmark-based synopsis. We propose a pre-execution plan-selection method for approximate vector search, enabling zero-cost-at-query-time fidelity prediction viable across model architectures and modality directions—demonstrating consistent calibration and ranking-quality correlation, with applicability to dynamic index selection and cost-aware retrieval planning without recomputation.',
+    bibtex: `@article{r2027fidelity,
+  title   = {Fidelity Synopses: Pre-Execution Plan Selection for Approximate Vector Search},
+  author  = {R, Adithya and Singh, Sanskar S. and Ramanath, Maya},
+  journal = {Submitted to VLDB 2027},
+  year    = {2027}
 }`,
     isConfidential: true,
-    confidentialNotice: 'Preparing for VLDB (October 2026) · Work in Progress',
+    confidentialNotice: 'Submitted to VLDB 2027 · Under Review',
   },
   {
     id: 'sinha2025sarch',
@@ -268,14 +268,14 @@ export default function Publications() {
             <div className="spotlight-card__header">
               <span className="spotlight-badge spotlight-badge--upcoming">
                 <span className="spotlight-dot spotlight-dot--purple"></span>
-                TARGET OCTOBER 2026 SUBMISSION
+                SUBMITTED
               </span>
               <BookOpen size={16} className="spotlight-icon spotlight-icon--purple" />
             </div>
             <h4 className="spotlight-venue">VLDB 2027</h4>
-            <div className="spotlight-location">Target: October 2026 Submission</div>
+            <div className="spotlight-location">Submitted</div>
             <p className="spotlight-desc">
-              Spatial Fidelity Maps: Ground-truth-free candidate fidelity prediction for scalable vector databases.
+              Fidelity Synopses: Pre-execution plan selection for approximate vector search.
             </p>
           </div>
         </div>

@@ -4,11 +4,11 @@ import './News.css'
 
 const newsData = [
   {
-    date: 'Oct 2026',
-    badge: 'Upcoming',
+    date: 'Sep 2026',
+    badge: 'Submitted',
     badgeType: 'purple',
-    title: 'Preparing VLDB Submission on "Spatial Fidelity Maps: A Query-Time, Ground-Truth-Free Signal for Approximate Nearest-Neighbor Retrieval"',
-    description: 'We are currently writing the manuscript and conducting large-scale benchmarking for our upcoming VLDB submission. The draft is not publicly showcased yet as the work is actively under process, with preprints coming soon!',
+    title: 'Submitted "Fidelity Synopses: Pre-Execution Plan Selection for Approximate Vector Search" to VLDB 2027',
+    description: 'Our paper on offline landmark-based fidelity synopses for pre-execution plan selection in approximate vector search has been submitted to VLDB 2027. Preprints coming soon!',
     link: '#research',
   },
   {
